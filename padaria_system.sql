@@ -19,3 +19,9 @@ CREATE TABLE clientes(
     telefone VARCHAR (12) NOT NULL UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE pedidos (
+  id int NOT NULL,
+  nome_pedido varchar(100) NOT NULL,
+  preco varchar(9) NOT NULL
+);
