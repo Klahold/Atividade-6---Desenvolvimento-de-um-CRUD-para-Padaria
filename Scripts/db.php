@@ -1,9 +1,9 @@
 <?php
-// Conexão com o banco (contém erro de variável e de conexão)
-$host = "localhost";
-$user = "root";
+
+$servername = "localhost";
+$username = "root";
 $password = "root";
-$db = "";
+$dbname = "bumba_meu_pao_system";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
