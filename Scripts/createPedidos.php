@@ -4,10 +4,10 @@ include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
+    $nome_pedido = $_POST['nome_pedido'];
+    $preco = $_POST['preco'];
 
-    $sql = " INSERT INTO usuarios (name,email) VALUE ('$name','$email')";
+    $sql = " INSERT INTO usuarios (nome_pedido,preco) VALUE ('$nome_pedido','$preco')";
 
     if ($conn->query($sql) === true) {
         echo "Novo registro criado com sucesso.";
@@ -32,10 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <form method="POST" action="create.php">
 
-        <label for="name">Nome:</label>
+        <label for="name">produto:</label>
         <input type="text" name="name" required>
 
-        <label for="email">Email:</label>
+        <label for="email">preço:</label>
         <input type="email" name="email" required>
 
         <input type="submit" value="Adicionar">
