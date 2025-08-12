@@ -8,12 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $name = $_POST['name'];
     $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
 
-    $sql = "UPDATE usuarios SET name ='$name',email ='$email' WHERE id=$id";
+    $sql = "UPDATE clientes SET name ='$name',email ='$email',telefone ='$telefone' WHERE id=$id";
 
     if ($conn->query($sql) === true) {
         echo "Registro atualizado com sucesso.
-        <a href='read.php'>Ver registros.</a>
+        <a href='readClientes.php'>Ver registros.</a>
         ";
     } else {
         echo "Erro " . $sql . '<br>' . $conn->error;
@@ -22,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit(); 
 }
 
-$sql = "SELECT * FROM usuarios WHERE id=$id";
+$sql = "SELECT * FROM clientes WHERE id=$id";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
 
@@ -35,12 +36,13 @@ $row = $result -> fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>update</title>
+    <title>Update cliente</title>
 </head>
 
 <body>
-    <h1>Update funcionario</h1>
-    <form method="POST" action="update.php?id=<?php echo $row['id'];?>">
+    <h1>Update cliente</h1>
+
+    <form method="POST" action="updateClientes.php?id=<?php echo $row['id'];?>">
 
         <label for="name">Nome:</label>
         <input type="text" name="name" value="<?php echo $row['name'];?>" required>
@@ -49,6 +51,11 @@ $row = $result -> fetch_assoc();
 
         <label for="email">Email:</label>
         <input type="email" name="email" value="<?php echo $row['email'];?>" required>
+
+        <br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" value="<?php echo $row['telefone'];?>" required>
 
         <br>
 

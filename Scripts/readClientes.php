@@ -2,7 +2,7 @@
 
 include 'db.php';
 
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT * FROM clientes";
 
 $result = $conn->query($sql);
 
@@ -13,6 +13,7 @@ if ($result->num_rows > 0) {
             <th> ID </th>
             <th> Nome </th>
             <th> Email </th>
+            <th> Telefone </th>
             <th> Data de Criação </th>
             <th> Ações </th>
         </tr>
@@ -24,10 +25,11 @@ if ($result->num_rows > 0) {
                 <td> {$row['id']} </td>
                 <td> {$row['name']} </td>
                 <td> {$row['email']} </td>
+                <td> {$row['telefone']} </td>
                 <td> {$row['created_at']} </td>
                 <td> 
-                    <a href='update.php?id={$row['id']}'>Editar<a>
-                    <a href='delete.php?id={$row['id']}'>Excluir<a>
+                    <a href='updateClientes.php?id={$row['id']}'>Editar<a>
+                    <a href='deleteClientes.php?id={$row['id']}'>Excluir<a>
                 
                 </td>
               </tr>   
@@ -40,6 +42,5 @@ if ($result->num_rows > 0) {
 
 $conn -> close();
 
-echo "<a href='create.php'>Inserir novo Cadastro</a>";
+echo "<a href='createClientes.php'>Inserir novo Cadastro</a>";
 echo "<a href='../Public/paginaInicial.html'>Voltar para o menu</a>";
-?>
