@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome_pedido = $_POST['nome_pedido'];
     $preco = $_POST['preco'];
 
-    $sql = " INSERT INTO usuarios (nome_pedido,preco) VALUE ('$nome_pedido','$preco')";
+    $sql = " INSERT INTO pedidos (nome_pedido,preco) VALUE ('$nome_pedido','$preco')";
 
     if ($conn->query($sql) === true) {
         echo "Novo registro criado com sucesso.";
@@ -35,8 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="name">produto:</label>
         <input type="text" name="name" required>
 
-        <label for="email">preço:</label>
-        <input type="email" name="email" required>
+        <label for="number">preço:</label>
+        <input type="number" name="number" required>
 
         <input type="submit" value="Adicionar">
 
