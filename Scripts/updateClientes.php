@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
 
-    $sql = "UPDATE clientes SET name ='$name',email ='$email',telefone ='$telefone' WHERE id=$id";
+    $sql = "UPDATE clientes SET name ='$name',email ='$email',telefone ='$telefone' WHERE id_clientes=$id";
 
     if ($conn->query($sql) === true) {
         echo "Registro atualizado com sucesso.
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit(); 
 }
 
-$sql = "SELECT * FROM clientes WHERE id=$id";
+$sql = "SELECT * FROM clientes WHERE id_clientes=$id";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
 
@@ -42,7 +42,7 @@ $row = $result -> fetch_assoc();
 <body>
     <h1>Update cliente</h1>
 
-    <form method="POST" action="updateClientes.php?id=<?php echo $row['id'];?>">
+    <form method="POST" action="updateClientes.php?id=<?php echo $row['id_clientes'];?>">
 
         <label for="name">Nome:</label>
         <input type="text" name="name" value="<?php echo $row['name'];?>" required>

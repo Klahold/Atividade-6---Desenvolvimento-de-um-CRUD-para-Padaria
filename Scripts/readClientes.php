@@ -22,14 +22,14 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
 
         echo "<tr>
-                <td> {$row['id']} </td>
+                <td> {$row['id_clientes']} </td>
                 <td> {$row['name']} </td>
                 <td> {$row['email']} </td>
                 <td> {$row['telefone']} </td>
                 <td> {$row['created_at']} </td>
                 <td> 
-                    <a href='updateClientes.php?id={$row['id']}'>Editar<a>
-                    <a href='deleteClientes.php?id={$row['id']}'>Excluir<a>
+                    <a href='updateClientes.php?id_clientes={$row['id_clientes']}'>Editar<a>
+                    <a href='deleteClientes.php?id_clientes={$row['id_clientes']}'>Excluir<a>
                 
                 </td>
               </tr>   
