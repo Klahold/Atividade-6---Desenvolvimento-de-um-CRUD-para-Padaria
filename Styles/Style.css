@@ -30,3 +30,9 @@ body{
     background-color: rgb(179, 113, 28);
 
 }
+
+.cadastro{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}

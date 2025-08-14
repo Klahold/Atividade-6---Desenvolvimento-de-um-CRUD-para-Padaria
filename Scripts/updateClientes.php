@@ -63,7 +63,7 @@ $row = $result -> fetch_assoc();
 
     </form>
 
-    <a href="read.php">Ver registros.</a>
+    <a href="readClientes.php">Ver registros.</a>
 
 </body>
 
