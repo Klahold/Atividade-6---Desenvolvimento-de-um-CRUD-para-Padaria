@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <br>
 
-        <label for="descricao">preco:</label>
+        <label for="descricao">Descrição:</label>
         <input type="text" name="descricao" required>
 
         <br>
