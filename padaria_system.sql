@@ -36,8 +36,8 @@ CREATE TABLE pedido (
   data_pedido DATETIME NOT NULL,
   status VARCHAR(50) NOT NULL,
 
-  id_cliente INT NOT NULL,
-  id_produto INT NOT NULL,
+  id_clientes INT NOT NULL,
+  id_produtos INT NOT NULL,
 
   FOREIGN KEY (id_clientes) REFERENCES clientes(id_clientes),
   FOREIGN KEY (id_produtos) REFERENCES clientes(id_produtos)
