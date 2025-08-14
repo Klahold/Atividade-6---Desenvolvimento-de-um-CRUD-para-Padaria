@@ -26,13 +26,20 @@ body{
     color: antiquewhite;
 }
 
-.btn botaocliente{
+.btn bnt-cliente bnt-lg{
     background-color: rgb(179, 113, 28);
+    color: rgb(238, 204, 160);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 .cadastro{
     display: flex;
     align-items:center;
+    justify-content: center;
+}
+.formulario{
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
