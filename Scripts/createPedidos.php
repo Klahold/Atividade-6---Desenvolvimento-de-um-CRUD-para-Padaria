@@ -8,8 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $preco = $_POST['preco'];
     
 
-    $sql = " INSERT INTO pedidos (nome_pedido,preco) VALUE ('$nome_pedido','preco')";
+    $sql = " INSERT INTO pedidos (nome_pedido,preco) VALUE ('$nome_pedido','$preco')";
 
+    
     if ($conn->query($sql) === true) {
         echo "Novo registro criado com sucesso.";
     } else {
