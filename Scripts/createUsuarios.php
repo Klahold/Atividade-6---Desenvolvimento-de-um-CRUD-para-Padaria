@@ -4,13 +4,11 @@ include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $nome_pedido = $_POST['nome_pedido'];
-    $preco = $_POST['preco'];
-    
+    $nome = $_POST['name'];
+    $email = $_POST['email'];
 
-    $sql = " INSERT INTO pedidos (nome_pedido,preco) VALUE ('$nome_pedido','$preco')";
+    $sql = " INSERT INTO usuarios (name,email) VALUE ('$name','$email')";
 
-    
     if ($conn->query($sql) === true) {
         echo "Novo registro criado com sucesso.";
     } else {
@@ -27,21 +25,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fazer pedido</title>
+    <title>Cadastrar funcionario</title>
 </head>
 
 <body>
-    <h1>Cadastrar cliente</h1>
+    <h1>Cadastrar funcionario</h1>
+    <form method="POST" action="create.php">
 
-    <form method="POST" action="createPedidos.php">
-
-        <label for="name">Produto:</label>
+        <label for="name">Nome:</label>
         <input type="text" name="name" required>
 
         <br>
 
-        <label for="number">preco:</label>
-        <input type="number" name="number" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
 
         <br>
 
@@ -49,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     </form>
 
-    <a href="">Ver registros.</a>
+    <a href="readUsuarios.php">Ver registros.</a>
 
 </body>
 
