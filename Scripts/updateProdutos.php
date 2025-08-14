@@ -6,10 +6,10 @@ $id = $_GET['id'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = $_POST['nome_pedido'];
-    $preco = $_POST['preco'];
+    $nome = $_POST['nome'];
+    $descricao = $_POST['descricao'];
 
-    $sql = "UPDATE pedidos SET nome_pedido ='$name',preco ='$preco' WHERE id=$id";
+    $sql = "UPDATE pedido SET nome ='$nome',descricao ='$descricao' WHERE id=$id";
 
     if ($conn->query($sql) === true) {
         echo "Registro atualizado com sucesso.
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit(); 
 }
 
-$sql = "SELECT * FROM pedidos WHERE id=$id";
+$sql = "SELECT * FROM pedido WHERE id=$id";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
 
@@ -42,13 +42,13 @@ $row = $result -> fetch_assoc();
     <h1>Update pedidos</h1>
     <form method="POST" action="update.php?id=<?php echo $row['id'];?>">
 
-        <label for="name">Nome:</label>
-        <input type="text" name="name" value="<?php echo $row['name'];?>" required>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" value="<?php echo $row['nome'];?>" required>
 
         <br>
 
-        <label for="preco">Email:</label>
-        <input type="number" name="preco" value="<?php echo $row['preco'];?>" required>
+        <label for="descricao">Email:</label>
+        <input type="text" name="descricao" value="<?php echo $row['descricao'];?>" required>
 
         <br>
 
