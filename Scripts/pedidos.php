@@ -28,8 +28,8 @@ if ($result->num_rows > 0) {
                 <td> {$row['preco']} </td>
                 <td> {$row['quantidade_estoque']} </td>
                 <td> 
-                    <a href='updateProdutos.php?id={$row['id']}'>Editar<a>
-                    <a href='deleteProdutos.php?id={$row['id']}'>Excluir<a>
+                    <a href='adicionarPedido.php?id={$row['id']}'>+<a>
+                    <a href='tirarPediod.php?id={$row['id']}'>-<a>
                 
                 </td>
               </tr>   
@@ -42,6 +42,6 @@ if ($result->num_rows > 0) {
 
 $conn -> close();
 
-echo "<a href='createProdutos.php'>Inserir novo Cadastro</a>";
+echo "<a href='pedido.php'>Fazer novo pedido</a>";
 echo "<a href='../Public/paginaInicial.html'>Voltar para o menu</a>";
 ?>

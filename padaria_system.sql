@@ -25,7 +25,7 @@ CREATE TABLE produtos (
   nome varchar(100) NOT NULL,
   descricao TEXT NOT NULL,
   preco DECIMAL(10,2) NOT NULL,
-  quantidade_estoque INT NOT NULL
+  quantidade_estoque INT NOT NULL,
   id_usuarios INT NOT NULL,
   FOREIGN KEY (id_usuarios) REFERENCES usuarios(id_usuarios)
 );
