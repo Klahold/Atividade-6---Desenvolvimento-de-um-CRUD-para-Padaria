@@ -31,7 +31,7 @@ CREATE TABLE produtos (
 );
 
 CREATE TABLE pedido (
-  id_pedido INT AUTO_INCREMENT NOT NULL,
+  id_pedido INT AUTO_INCREMENT PRIMARY KEY,
   quantidade INT NOT NULL,
   data_pedido DATETIME NOT NULL,
   status VARCHAR(50) NOT NULL,
