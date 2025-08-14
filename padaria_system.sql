@@ -40,6 +40,6 @@ CREATE TABLE pedido (
   id_produtos INT NOT NULL,
 
   FOREIGN KEY (id_clientes) REFERENCES clientes(id_clientes),
-  FOREIGN KEY (id_produtos) REFERENCES clientes(id_produtos)
+  FOREIGN KEY (id_produtos) REFERENCES produtos(id_produtos)
 );
 
