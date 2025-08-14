@@ -23,7 +23,7 @@ CREATE TABLE clientes(
 CREATE TABLE produtos (
   id_produtos int AUTO_INCREMENT NOT NULL,
   nome varchar(100) NOT NULL,
-  descricao TEX NOT NULL,
+  descricao TEXT NOT NULL,
   preco DECIMAL(10,2) NOT NULL,
   quantidade_estoque INT NOT NULL
   id_usuarios INT NOT NULL,
