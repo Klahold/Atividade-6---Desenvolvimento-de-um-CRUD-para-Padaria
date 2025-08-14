@@ -6,6 +6,8 @@ body{
 .navbar{
     background-color: rgb(221, 186, 139);
     height: 250px;
+   
+  
 }
 
 #Logo{
@@ -18,3 +20,4 @@ body{
 .Logo{
     color: antiquewhite;
 }
+
