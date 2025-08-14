@@ -4,7 +4,7 @@ include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = $_POST['name'];
+    $nome = $_POST['name'];
     $email = $_POST['email'];
 
     $sql = " INSERT INTO usuarios (name,email) VALUE ('$name','$email')";
