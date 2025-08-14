@@ -26,8 +26,8 @@ if ($result->num_rows > 0) {
                 <td> {$row['email']} </td>
                 <td> {$row['created_at']} </td>
                 <td> 
-                    <a href='update.php?id={$row['id']}'>Editar<a>
-                    <a href='delete.php?id={$row['id']}'>Excluir<a>
+                    <a href='updateUsuarios.php?id={$row['id']}'>Editar<a>
+                    <a href='deleteUsuarios.php?id={$row['id']}'>Excluir<a>
                 
                 </td>
               </tr>   
@@ -40,6 +40,6 @@ if ($result->num_rows > 0) {
 
 $conn -> close();
 
-echo "<a href='create.php'>Inserir novo Cadastro</a>";
+echo "<a href='createUsuarios.php'>Inserir novo Cadastro</a>";
 echo "<a href='../Public/paginaInicial.html'>Voltar para o menu</a>";
 ?>
