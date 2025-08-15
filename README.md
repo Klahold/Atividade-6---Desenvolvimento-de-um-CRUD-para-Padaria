@@ -6,3 +6,4 @@ Cliente cadastram-se com Email, Telefone e Nome
 Funcionários cadastram-se com Email e Nome
 Produtos são cadastrados com Nome Do Produto, Preço Do Produto e Quantidade Do Produto
 Os Scripts de update atualizam os dados dos cadastros quando um novo é feito
+Ao cadastrar um produto ele aparecerá em uma telinha separada onde mostra o preço, uma imagem e o nome do item
