@@ -40,6 +40,6 @@ if ($result->num_rows > 0) {
 
 $conn -> close();
 
-echo "<a href='createUsuarios.php'>Inserir novo Cadastro</a>";
+echo "<a href='createUsuarios.php'>Inserir novo Cadastro</a> <br>";
 echo "<a href='../Public/paginaInicial.html'>Voltar para o menu</a>";
 ?>
