@@ -2,7 +2,7 @@
 
 include 'db.php';
 
-$id = $_GET['id'];
+$id = $_GET['id_produtos'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit(); 
 }
 
-$sql = "SELECT * FROM produtos WHERE id=$id";
+$sql = "SELECT * FROM produtos WHERE id_produtos=$id";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
 
@@ -42,7 +42,7 @@ $row = $result -> fetch_assoc();
 
 <body>
     <h1>Update produtos</h1>
-    <form method="POST" action="updateProdutos.php?id=<?php echo $row['id'];?>">
+    <form method="POST" action="updateProdutos.php?id_produtos=<?php echo $row['id_produtos'];?>">
 
         <label for="nome">Nome:</label>
         <input type="text" name="nome" value="<?php echo $row['nome'];?>" required>

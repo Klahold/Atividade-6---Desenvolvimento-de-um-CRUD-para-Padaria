@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $quantidade_estoque = $_POST['quantidade'];
     
 
-    $sql = " INSERT INTO produtos  (nome,descricao,preco,quantidade_estoque) VALUE ('$nome','$descricao','$quantidade_estoque','$preco')";
+    $sql = " INSERT INTO produtos (nome,descricao,preco,quantidade_estoque, id_usuarios) VALUE ('$nome','$descricao','$preco','$quantidade_estoque','4')";
 
     if ($conn->query($sql) === true) {
         echo "Novo registro criado com sucesso.";
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <br>
 
-        <label for="preco">preco:</label>
+        <label for="preco">Preco:</label>
         <input type="number" step="0.01" name="preco" required>
 
         <br>
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     </form>
 
-    <a href="">Ver Produtos.</a>
+    <a href="readProdutos">Ver Produtos.</a>
 
 </body>
 

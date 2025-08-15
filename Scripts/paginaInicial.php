@@ -42,11 +42,11 @@
                              <h2> Qual deseja cadastrar?</h2>
                          </div>
                         <div>
-                        <a href="../Public/cadastroClientes.html">
+                        <a href="cadastroClientes.php">
                         <button type="button" class="btn botaocliente btn-lg">Cliente</button> </a>
-                        <a href="../Public/Produtos.html">
+                        <a href="Produtos.php">
                         <button type="button" class="btn btn-produto btn-lg">Produto</button></a>
-                        <a href="../Public/cadastroFuncionarios.html">
+                        <a href="cadastroFuncionarios.php">
                         <button type="button" class="btn btn-produto btn-lg">Funcionário</button></a>
                         </div>
                     </div>                   
