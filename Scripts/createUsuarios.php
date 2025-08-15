@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['name'];
     $email = $_POST['email'];
 
-    $sql = " INSERT INTO usuarios (name,email) VALUE ('$name','$email')";
+    $sql = " INSERT INTO usuarios (name,email) VALUE ('$nome','$email')";
 
     if ($conn->query($sql) === true) {
         echo "Novo registro criado com sucesso.";
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <h1>Cadastrar funcionario</h1>
-    <form method="POST" action="create.php">
+    <form method="POST" action="createUsuarios.php">
 
         <label for="name">Nome:</label>
         <input type="text" name="name" required>

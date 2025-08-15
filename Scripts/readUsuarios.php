@@ -21,13 +21,13 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
 
         echo "<tr>
-                <td> {$row['id']} </td>
+                <td> {$row['id_usuarios']} </td>
                 <td> {$row['name']} </td>
                 <td> {$row['email']} </td>
                 <td> {$row['created_at']} </td>
                 <td> 
-                    <a href='updateUsuarios.php?id={$row['id']}'>Editar<a>
-                    <a href='deleteUsuarios.php?id={$row['id']}'>Excluir<a>
+                    <a href='updateUsuarios.php?id_usuarios={$row['id_usuarios']}'>Editar<a>
+                    <a href='deleteUsuarios.php?id_usuarios={$row['id_usuarios']}'>Excluir<a>
                 
                 </td>
               </tr>   

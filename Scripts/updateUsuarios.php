@@ -2,14 +2,14 @@
 
 include 'db.php';
 
-$id = $_GET['id'];
+$id = $_GET['id_usuarios'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $name = $_POST['name'];
     $email = $_POST['email'];
 
-    $sql = "UPDATE usuarios SET name ='$name',email ='$email' WHERE id=$id";
+    $sql = "UPDATE usuarios SET name ='$name',email ='$email' WHERE id_usuarios=$id";
 
     if ($conn->query($sql) === true) {
         echo "Registro atualizado com sucesso.
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit(); 
 }
 
-$sql = "SELECT * FROM usuarios WHERE id=$id";
+$sql = "SELECT * FROM usuarios WHERE id_usuarios=$id";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
 
@@ -40,7 +40,7 @@ $row = $result -> fetch_assoc();
 
 <body>
     <h1>Update funcionario</h1>
-    <form method="POST" action="updateUsuarios.php?id=<?php echo $row['id'];?>">
+    <form method="POST" action="updateUsuarios.php?id_usuarios=<?php echo $row['id_usuarios'];?>">
 
         <label for="name">Nome:</label>
         <input type="text" name="name" value="<?php echo $row['name'];?>" required>
