@@ -2,7 +2,7 @@
 
 include 'db.php';
 
-$id = $_GET['id'];
+$id = $_GET['id_clientes'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -42,7 +42,7 @@ $row = $result -> fetch_assoc();
 <body>
     <h1>Update cliente</h1>
 
-    <form method="POST" action="updateClientes.php?id=<?php echo $row['id_clientes'];?>">
+    <form method="POST" action="updateClientes.php?id_clientes=<?php echo $row['id_clientes'];?>">
 
         <label for="name">Nome:</label>
         <input type="text" name="name" value="<?php echo $row['name'];?>" required>

@@ -1,9 +1,9 @@
 <?php
 
 include 'db.php';
-$id = $_GET['id'];
+$id = $_GET['id_clientes'];
 
-$sql = " DELETE FROM clientes WHERE id=$id ";
+$sql = " DELETE FROM clientes WHERE id_clientes=$id ";
 
 if ($conn->query($sql) === true) {
     echo "Registro excluído com sucesso.
