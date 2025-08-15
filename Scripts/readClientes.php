@@ -43,4 +43,4 @@ if ($result->num_rows > 0) {
 $conn -> close();
 
 echo "<a href='createClientes.php'>Inserir novo Cadastro</a>";
-echo "<a href='../Public/paginaInicial.html'>Voltar para o menu</a>";
+echo "<a href='paginaInicial.php'>Voltar para o menu</a>";

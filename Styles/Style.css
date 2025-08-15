@@ -44,3 +44,14 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.card img{
+    width: 290px;
+}
+
+.seta{
+    display: flex;
+    width: 40px;
+    border-radius: 50%;
+    left: 0px;
+}
