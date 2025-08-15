@@ -25,49 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/Style.css">
-    <title>Fazer produtos</title>
-</head>
-
-<body>
-    <h1>Cadastrar Produtos</h1>
-
-    <form method="POST" action="createProdutos.php">
-
-        <label for="name">Produto:</label>
-        <input type="text" name="name" required>
-
-        <br>
-
-        <label for="descricao">Descrição:</label>
-        <input type="text" name="descricao" required>
-
-        <br>
-
-        <label for="preco">Preco:</label>
-        <input type="number" step="0.01" name="preco" required>
-
-        <br>
-
-        <label for="quantidade">Quantidade no estoque:</label>
-        <input type="number" name="quantidade" required>
-
-        <br>
-
-        <input type="submit" value="Adicionar">
-
-    </form>
-
-    <a href="readProdutos">Ver Produtos.</a>
-
-</body>
-
-</html>
-
-
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,29 +55,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     
         <dIv>
-          <form>
+          <form method="POST" action="createProdutos.php">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome</label>
+                        <label for="nome" class="form-label">Produto</label>
                         <input type="nome" class="form-control" id="nome" aria-describedby="NomeHelp">
-                        <div id="NomeHelp" class="form-text">Digite seu nome completo.</div>
+                        <div id="NomeHelp" class="form-text">digite nome.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="EmailHelp">
-                        <div id="EmailHelp" class="form-text">Digite seu email mais recente.</div>
+                        <label for="descricao" class="form-label">Descrição</label>
+                        <input type="tex" class="form-control" id="descricao" aria-describedby="EmailHelp">
+                        <div id="DescricaoHelp" class="form-text">sobre o produto.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="telefone" class="form-label">Telefone</label>
-                        <input type="telefone" class="form-control" id="telefonee" aria-describedby="telefoneHelp">
-                        <div id="telefoneHelp" class="form-text">Digite telefone para contato.</div>
+                        <label for="preco" class="form-label">Preço</label>
+                        <input type="number" class="form-control" id="preco" aria-describedby="telefoneHelp">
+                        <div id="precoHelp" class="form-text">Adicione o preço.</div>
                     </div>
-        
+                    <div class="mb-3">
+                        <label for="quantidade" class="form-label">quantidade</label>
+                        <input type="number" class="form-control" id="quanitidade" aria-describedby="telefoneHelp">
+                        <div id="quantidadeHelp" class="form-text">digite a quantidade.</div>
+                    </div>
+    
+
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 
-                    <a href="../Scripts/readClientes.php">Ver registros.</a>
+                    <a href="../Scripts/readProdutos">Ver registros.</a>
+            
             </Div>
 
             </div>
+            </forn>
         </dIv>
         </main>
     
