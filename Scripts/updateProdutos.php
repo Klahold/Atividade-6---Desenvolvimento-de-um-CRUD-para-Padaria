@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit(); 
 }
 
-$sql = "SELECT * FROM produtos WHERE id=$id";
+$sql = "SELECT * FROM produtos WHERE id_produtos=$id";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
 
