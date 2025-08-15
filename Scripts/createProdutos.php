@@ -4,7 +4,7 @@ include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $nome = $_POST['name'];
+    $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
     $preco = $_POST['preco'];
     $quantidade_estoque = $_POST['quantidade'];
@@ -58,17 +58,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <form method="POST" action="createProdutos.php">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Produto</label>
-                        <input type="nome" class="form-control" id="nome" aria-describedby="NomeHelp">
+                        <input type="text" class="form-control" id="nome" aria-describedby="NomeHelp">
                         <div id="NomeHelp" class="form-text">digite nome.</div>
                     </div>
                     <div class="mb-3">
                         <label for="descricao" class="form-label">Descrição</label>
-                        <input type="tex" class="form-control" id="descricao" aria-describedby="EmailHelp">
+                        <input type="text" class="form-control" id="descricao" aria-describedby="EmailHelp">
                         <div id="DescricaoHelp" class="form-text">sobre o produto.</div>
                     </div>
                     <div class="mb-3">
                         <label for="preco" class="form-label">Preço</label>
-                        <input type="number" class="form-control" id="preco" aria-describedby="telefoneHelp">
+                        <input type="number" class="form-control" id="preco" set: 0.01 aria-describedby="telefoneHelp">
                         <div id="precoHelp" class="form-text">Adicione o preço.</div>
                     </div>
                     <div class="mb-3">
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 
-                    <a href="../Scripts/readProdutos">Ver registros.</a>
+                    <a href="readProdutos.php">Ver registros.</a>
             
             </Div>
 
