@@ -23,6 +23,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <html lang="en">
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Styles/Style.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,31 +36,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <h1>Cadastrar cliente</h1>
 
-    <form method="POST" action="createClientes.php">
 
-        <label for="name">Nome:</label>
-        <input type="text" name="name" required>
+        <header>
+            <div class ="navbar"> 
+                <div class ="Logo">
+                    <img id="Logo" src="../Assets/Logo.Padaria (1).png" alt="Logo do Bumba meu boi">
+                </div>
+                
+           
+            </div>
+        </header>
 
-        <br>
+        <main>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" required>
+    
+        <dIv>
+          <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="nome" class="form-control" id="nome" aria-describedby="NomeHelp">
+                        <div id="NomeHelp" class="form-text">Digite seu nome completo.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="EmailHelp">
+                        <div id="EmailHelp" class="form-text">Digite seu email mais recente.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="telefone" class="form-control" id="telefonee" aria-describedby="telefoneHelp">
+                        <div id="telefoneHelp" class="form-text">Digite telefone para contato.</div>
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                
+                    <a href="../Scripts/readClientes.php">Ver registros.</a>
+            </Div>
 
-        <br>
-
-        <label for="telefone">Telefone:</label>
-        <input type="tel" name="telefone" required>
-
-        <br>
-
-        <input type="submit" value="Adicionar">
-
-    </form>
-
-    <a href="readClientes.php">Ver registros.</a>
-
-</body>
-
-</html>
+            </div>
+        </dIv>
+        </main>
+    
+    </body>
+    </html>
