@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     
         <dIv>
-          <form>
+          <form method="POST" action="createProdutos.php">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome</label>
                         <input type="nome" class="form-control" id="nome" aria-describedby="NomeHelp">
@@ -72,9 +72,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 
                     <a href="../Scripts/readClientes.php">Ver registros.</a>
+            
             </Div>
 
             </div>
+        </forn>
         </dIv>
         </main>
     
