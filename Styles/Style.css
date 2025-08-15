@@ -44,3 +44,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.card img{
+    width: 290px;
+}
