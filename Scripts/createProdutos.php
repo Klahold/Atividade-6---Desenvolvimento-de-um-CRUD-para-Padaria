@@ -4,15 +4,14 @@ include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $nome = $_POST['nome'];
+    $nome = $_POST['name'];
     $descricao = $_POST['descricao'];
     $preco = $_POST['preco'];
-    $quantidade_estoque = $_POST['quantidade_estoque'];
+    $quantidade_estoque = $_POST['quantidade'];
     
 
     $sql = " INSERT INTO produtos  (nome,descricao,preco,quantidade_estoque) VALUE ('$nome','$descricao','$quantidade_estoque','$preco')";
 
-    
     if ($conn->query($sql) === true) {
         echo "Novo registro criado com sucesso.";
     } else {
@@ -48,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br>
 
         <label for="preco">preco:</label>
-        <input type="number" name="preco" required>
+        <input type="number" step="0.01" name="preco" required>
 
         <br>
 
