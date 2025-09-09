@@ -20,6 +20,6 @@
     <title>Index</title>
 </head>
 <body>
-    <a href="./scripts/paginaInicial.php">Inicio</a>
+    <a href="./scripts/login.php">Inicio</a>
 </body>
 </html>
